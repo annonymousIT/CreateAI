@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command *)",
+      "PowerShell(python -c \"from createai.llm import LLMClient, OllamaClient; from createai.tools.base import Tool, ToolRegistry; print\\('imports OK'\\)\")",
+      "PowerShell(python -c \"import httpx; print\\('httpx', httpx.__version__\\)\")",
+      "PowerShell(& \"$env:LOCALAPPDATA\\\\Programs\\\\Ollama\\\\ollama.exe\" --version; Write-Output \"---\"; & \"$env:LOCALAPPDATA\\\\Programs\\\\Ollama\\\\ollama.exe\" list)",
+      "PowerShell(& \"$env:LOCALAPPDATA\\\\Programs\\\\Ollama\\\\ollama.exe\" pull qwen2.5:7b)",
+      "PowerShell(& \"$env:LOCALAPPDATA\\\\Programs\\\\Ollama\\\\ollama.exe\" list)",
+      "PowerShell(python examples/check_ollama.py qwen2.5:7b)"
+    ]
+  }
+}
